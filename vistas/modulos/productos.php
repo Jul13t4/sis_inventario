@@ -56,7 +56,7 @@ if($_SESSION["perfil"] == "Vendedor"){
          <tr>
            
            <th style="width:10px">#</th>
-           <th>Imagen</th>
+           <!--<th>Imagen</th>-->
            <th>Código</th>
            <th>Descripción</th>
            <th>Categoría</th>
@@ -255,7 +255,7 @@ MODAL AGREGAR PRODUCTO
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
-             <div class="form-group">
+             <!--<div class="form-group">
               
               <div class="panel">SUBIR IMAGEN</div>
 
@@ -265,7 +265,7 @@ MODAL AGREGAR PRODUCTO
 
               <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
 
-            </div>
+            </div>-->
 
           </div>
 
@@ -457,7 +457,7 @@ MODAL EDITAR PRODUCTO
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
-             <div class="form-group">
+             <!--<div class="form-group">
               
               <div class="panel">SUBIR IMAGEN</div>
 
@@ -469,7 +469,7 @@ MODAL EDITAR PRODUCTO
 
               <input type="hidden" name="imagenActual" id="imagenActual">
 
-            </div>
+            </div>-->
 
           </div>
 

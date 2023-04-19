@@ -308,7 +308,7 @@ MODAL AGREGAR PRODUCTO
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
-             <div class="form-group">
+             <!--<div class="form-group">
               
               <div class="panel">SUBIR IMAGEN</div>
 
@@ -318,7 +318,7 @@ MODAL AGREGAR PRODUCTO
 
               <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail" width="100px">
 
-            </div>
+            </div>-->
 
           </div>
 

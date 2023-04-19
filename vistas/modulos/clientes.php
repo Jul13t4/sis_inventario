@@ -20,7 +20,7 @@ if($_SESSION["perfil"] == "Especial"){
     
     <h1>
       
-      Administrar clientes
+      Administrar pedidos
     
     </h1>
 
@@ -28,7 +28,7 @@ if($_SESSION["perfil"] == "Especial"){
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar clientes</li>
+      <li class="active">Administrar pedidos</li>
     
     </ol>
 
@@ -42,7 +42,7 @@ if($_SESSION["perfil"] == "Especial"){
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCliente">
           
-          Agregar cliente
+        Agregar usuario de pedidos
 
         </button>
 

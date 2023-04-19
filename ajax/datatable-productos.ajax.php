@@ -37,7 +37,7 @@ class TablaProductos{
  	 		TRAEMOS LA IMAGEN
   			=============================================*/ 
 
-		  	$imagen = "<img src='".$productos[$i]["imagen"]."' width='40px'>";
+		  	//$imagen = "<img src='".$productos[$i]["imagen"]."' width='40px'>";
 
 		  	/*=============================================
  	 		TRAEMOS LA CATEGORÍA
@@ -83,7 +83,6 @@ class TablaProductos{
 		 
 		  	$datosJson .='[
 			      "'.($i+1).'",
-			      "'.$imagen.'",
 			      "'.$productos[$i]["codigo"].'",
 			      "'.$productos[$i]["descripcion"].'",
 			      "'.$categorias["categoria"].'",
@@ -93,7 +92,7 @@ class TablaProductos{
 			      "'.$productos[$i]["fecha"].'",
 			      "'.$botones.'"
 			    ],';
-
+					//"'.$imagen.'" Después del ID
 		  }
 
 		  $datosJson = substr($datosJson, 0, -1);

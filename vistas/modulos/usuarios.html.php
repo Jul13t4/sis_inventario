@@ -43,7 +43,7 @@
            <th style="width:10px">#</th>
            <th>Nombre</th>
            <th>Usuario</th>
-           <th>Foto</th>
+           <!-- <th>Foto</th> -->
            <th>Perfil</th>
            <th>Estado</th>
            <th>Último login</th>
@@ -233,7 +233,7 @@ MODAL AGREGAR USUARIO
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
-             <div class="form-group">
+             <!--<div class="form-group">
               
               <div class="panel">SUBIR FOTO</div>
 
@@ -243,7 +243,7 @@ MODAL AGREGAR USUARIO
 
               <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="100px">
 
-            </div>
+            </div>-->
 
           </div>
 

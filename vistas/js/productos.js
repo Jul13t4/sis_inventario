@@ -152,7 +152,7 @@ $(".porcentaje").on("ifChecked",function(){
 SUBIENDO LA FOTO DEL PRODUCTO
 =============================================*/
 
-$(".nuevaImagen").change(function(){
+/*$(".nuevaImagen").change(function(){
 
 	var imagen = this.files[0];
 	
@@ -160,7 +160,7 @@ $(".nuevaImagen").change(function(){
   	VALIDAMOS EL FORMATO DE LA IMAGEN SEA JPG O PNG
   	=============================================*/
 
-  	if(imagen["type"] != "image/jpeg" && imagen["type"] != "image/png"){
+  	/*if(imagen["type"] != "image/jpeg" && imagen["type"] != "image/png"){
 
   		$(".nuevaImagen").val("");
 
@@ -251,13 +251,13 @@ $(".tablaProductos tbody").on("click", "button.btnEditarProducto", function(){
 
            $("#editarPrecioVenta").val(respuesta["precio_venta"]);
 
-           if(respuesta["imagen"] != ""){
+          /* if(respuesta["imagen"] != ""){
 
            	$("#imagenActual").val(respuesta["imagen"]);
 
            	$(".previsualizar").attr("src",  respuesta["imagen"]);
 
-           }
+           }*/
 
       }
 

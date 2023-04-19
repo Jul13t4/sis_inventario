@@ -402,7 +402,8 @@ class ControladorUsuarios{
 
 			}else{
 
-				echo'<script>
+				echo
+				'<script>
 
 					swal({
 						  type: "error",

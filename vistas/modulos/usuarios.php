@@ -58,7 +58,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
            <th style="width:10px">#</th>
            <th>Nombre</th>
            <th>Usuario</th>
-           <th>Foto</th>
+           <!--<th>Foto</th>-->
            <th>Perfil</th>
            <th>Estado</th>
            <th>Último login</th>
@@ -84,7 +84,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
                   <td>'.$value["nombre"].'</td>
                   <td>'.$value["usuario"].'</td>';
 
-                  if($value["foto"] != ""){
+                  /*if($value["foto"] != ""){
 
                     echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="40px"></td>';
 
@@ -92,7 +92,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
                     echo '<td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>';
 
-                  }
+                  }*/
 
                   echo '<td>'.$value["perfil"].'</td>';
 
@@ -237,7 +237,7 @@ MODAL AGREGAR USUARIO
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
-             <div class="form-group">
+             <!--<div class="form-group">
               
               <div class="panel">SUBIR FOTO</div>
 
@@ -247,7 +247,7 @@ MODAL AGREGAR USUARIO
 
               <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
 
-            </div>
+            </div> -->
 
           </div>
 
@@ -382,7 +382,7 @@ MODAL EDITAR USUARIO
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
-             <div class="form-group">
+             <!--<div class="form-group">
               
               <div class="panel">SUBIR FOTO</div>
 
@@ -394,7 +394,7 @@ MODAL EDITAR USUARIO
 
               <input type="hidden" name="fotoActual" id="fotoActual">
 
-            </div>
+            </div> -->
 
           </div>
 
