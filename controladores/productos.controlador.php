@@ -24,7 +24,7 @@ class ControladorProductos{
 
 		if(isset($_POST["nuevaDescripcion"])){
 
-			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ]+$/', $_POST["nuevaDescripcion"]) &&
+			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-]+[[:ascii:]]/', $_POST["nuevaDescripcion"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["nuevoStock"]) &&	
 			   preg_match('/^[0-9.]+$/', $_POST["nuevoPrecioCompra"]) &&
 			   preg_match('/^[0-9.]+$/', $_POST["nuevoPrecioVenta"])){
@@ -33,7 +33,7 @@ class ControladorProductos{
 				VALIDAR IMAGEN
 				=============================================*/
 
-			/* ---------------- CARGUE DE IMAGEN (NO UTILIZAR) --------------------
+			/*---------------- CARGUE DE IMAGEN (NO UTILIZAR) --------------------
 
 			   	$ruta = "vistas/img/productos/default/anonymous.png";
 
@@ -108,7 +108,7 @@ class ControladorProductos{
 							   "stock" => $_POST["nuevoStock"],
 							   "precio_compra" => $_POST["nuevoPrecioCompra"],
 							   "precio_venta" => $_POST["nuevoPrecioVenta"]);
-							   //"imagen" => $ruta
+							   //"imagen" => $ruta)
 
 				$respuesta = ModeloProductos::mdlIngresarProducto($tabla, $datos);
 
@@ -163,7 +163,7 @@ class ControladorProductos{
 
 		if(isset($_POST["editarDescripcion"])){
 
-			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarDescripcion"]) &&
+			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-]+[[:ascii:]]/', $_POST["editarDescripcion"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["editarStock"]) &&	
 			   preg_match('/^[0-9.]+$/', $_POST["editarPrecioCompra"]) &&
 			   preg_match('/^[0-9.]+$/', $_POST["editarPrecioVenta"])){
