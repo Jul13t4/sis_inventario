@@ -4,7 +4,7 @@
     
     <h1>
       
-      Administrar pedidos
+      Administrar solicitudes
     
     </h1>
 
@@ -12,7 +12,7 @@
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar pedidos</li>
+      <li class="active">Administrar solicitudes</li>
     
     </ol>
 
@@ -26,7 +26,7 @@
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCliente">
           
-          Agregar usuario de pedidos
+          Agregar usuario de solicitudes
 
         </button>
 
@@ -39,18 +39,18 @@
         <thead>
          
          <tr>
-           
-           <th style="width:10px">#</th>
-           <th>Nombre</th>
-           <th>Documento ID</th>
-           <th>Email</th>
-           <th>Teléfono</th>
-           <th>Dirección</th>
-           <th>Fecha nacimiento</th> 
-           <th>Total compras</th>
-           <th>Última compra</th>
-           <th>Ingreso al sistema</th>
-           <th>Acciones</th>
+         
+          <th style="width:10px">#</th>
+          <th>Nombre</th>
+          <th>Documento ID</th>
+          <th>Email</th>
+          <th>Área</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th>Total compras</th>
+          <th>Última compra</th>
+          <th>Ingreso al sistema</th>
+          <th>Acciones</th>
 
          </tr> 
 
@@ -59,26 +59,6 @@
         <tbody>
           
           <tr>
-
-            <td>1</td>
-
-            <td>Juan Villegas</td>
-
-            <td>8161123</td>
-
-            <td>juan@hotmail.com</td>
-
-            <td>555 57 67</td>
-
-            <td>calle 27 # 40 - 36</td>
-
-            <td>1982-15-11</td>
-
-            <td>2017-12-11 12:05:32</td>
-
-            <td>35</td>
-
-            <td>2017-12-11 12:05:32</td>
 
             <td>
 
@@ -181,6 +161,20 @@ MODAL AGREGAR CLIENTE
 
             </div>
 
+            <!-- ENTRADA PARA LA ÁREA -->
+            
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-university"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaArea" placeholder="Ingresar área" required>
+
+              </div>
+
+            </div>
+
             <!-- ENTRADA PARA EL TELÉFONO -->
             
             <div class="form-group">
@@ -189,7 +183,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(99999)'" data-mask required>
 
               </div>
 
@@ -203,21 +197,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-map-marker"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" required>
-
-              </div>
-
-            </div>
-
-             <!-- ENTRADA PARA LA FECHA DE NACIMIENTO -->
-            
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-calendar"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevaFechaNacimiento" placeholder="Ingresar fecha nacimiento" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar Oficina" required>
 
               </div>
 

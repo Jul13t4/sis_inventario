@@ -21,9 +21,9 @@ class ControladorClientes{
 			   	$datos = array("nombre"=>$_POST["nuevoCliente"],
 					           "documento"=>$_POST["nuevoDocumentoId"],
 					           "email"=>$_POST["nuevoEmail"],
+							   "area"=>$_POST["nuevaArea"],
 					           "telefono"=>$_POST["nuevoTelefono"],
-					           "direccion"=>$_POST["nuevaDireccion"],
-					           "fecha_nacimiento"=>$_POST["nuevaFechaNacimiento"]);
+					           "direccion"=>$_POST["nuevaDireccion"]);
 
 			   	$respuesta = ModeloClientes::mdlIngresarCliente($tabla, $datos);
 
@@ -102,6 +102,7 @@ class ControladorClientes{
 			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["editarEmail"]) && 
 			   preg_match('/^[()\-0-9 ]+$/', $_POST["editarTelefono"]) && 
 			   preg_match('/^[#\.\-a-zA-Z0-9 ]+$/', $_POST["editarDireccion"])){
+			   
 
 			   	$tabla = "clientes";
 
@@ -109,9 +110,9 @@ class ControladorClientes{
 			   				   "nombre"=>$_POST["editarCliente"],
 					           "documento"=>$_POST["editarDocumentoId"],
 					           "email"=>$_POST["editarEmail"],
-					           "telefono"=>$_POST["editarTelefono"],
-					           "direccion"=>$_POST["editarDireccion"],
-					           "fecha_nacimiento"=>$_POST["editarFechaNacimiento"]);
+							   "area"=>$_POST["editarArea"],  
+							   "telefono"=>$_POST["editarTelefono"],
+					           "direccion"=>$_POST["editarDireccion"]);
 
 			   	$respuesta = ModeloClientes::mdlEditarCliente($tabla, $datos);
 
@@ -158,9 +159,7 @@ class ControladorClientes{
 
 
 			}
-
 		}
-
 	}
 
 	/*=============================================

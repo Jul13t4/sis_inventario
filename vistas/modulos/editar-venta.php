@@ -271,7 +271,7 @@
                 ENTRADA MÉTODO DE PAGO
                 ======================================-->
 
-                <div class="form-group row">
+                <!--<div class="form-group row">
                   
                   <div class="col-xs-6" style="padding-right:0px">
                     
@@ -292,7 +292,7 @@
 
                   <input type="hidden" id="listaMetodoPago" name="listaMetodoPago">
 
-                </div>
+                </div>-->
 
                 <br>
       
@@ -337,7 +337,7 @@
 
                  <tr>
                   <th style="width: 10px">#</th>
-                  <th>Imagen</th>
+                   <!--<th>Imagen</th>-->
                   <th>Código</th>
                   <th>Descripcion</th>
                   <th>Stock</th>
@@ -434,6 +434,20 @@ MODAL AGREGAR CLIENTE
               </div>
 
             </div>
+            
+            <!-- ENTRADA PARA LA ÁREA -->
+            
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-building"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaArea" placeholder="Ingresar área" required>
+
+              </div>
+
+            </div>
 
             <!-- ENTRADA PARA EL TELÉFONO -->
             
@@ -443,7 +457,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="léfono" data-inputmask="'mask':'(99999)'" data-mask required>
 
               </div>
 
@@ -458,20 +472,6 @@ MODAL AGREGAR CLIENTE
                 <span class="input-group-addon"><i class="fa fa-map-marker"></i></span> 
 
                 <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" required>
-
-              </div>
-
-            </div>
-
-             <!-- ENTRADA PARA LA FECHA DE NACIMIENTO -->
-            
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-calendar"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevaFechaNacimiento" placeholder="Ingresar fecha nacimiento" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask required>
 
               </div>
 

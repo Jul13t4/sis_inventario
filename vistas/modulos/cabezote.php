@@ -3,11 +3,11 @@
 	<!--=====================================
 	LOGOTIPO
 	======================================-->
-    <a href="escritorio.php" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>SIS</b> V</span>
+      <span class="logo-mini"><b>Almacén</b> Unisalud</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SIS</b> VENTAS</span>
+      <span class="logo-lg"><b>Almacén</b> Unisalud</span>
     </a>
 
 	<!--=====================================
@@ -35,7 +35,7 @@
 
 					<?php
 
-					if($_SESSION["foto"] != ""){
+					/*if($_SESSION["foto"] != ""){
 
 						echo '<img src="'.$_SESSION["foto"].'" class="user-image">';
 
@@ -44,7 +44,7 @@
 
 						echo '<img src="vistas/img/usuarios/default/anonymous.png" class="user-image">';
 
-					}
+					}*/
 
 
 					?>

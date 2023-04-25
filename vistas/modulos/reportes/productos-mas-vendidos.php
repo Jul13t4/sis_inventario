@@ -75,7 +75,6 @@ PRODUCTOS MÁS VENDIDOS
 						 
 						 <a>
 
-						 <img src="'.$productos[$i]["imagen"].'" class="img-thumbnail" width="60px" style="margin-right:10px"> 
 						 '.$productos[$i]["descripcion"].'
 
 						 <span class="pull-right text-'.$colores[$i].'">   

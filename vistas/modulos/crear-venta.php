@@ -20,7 +20,7 @@ if($_SESSION["perfil"] == "Especial"){
     
     <h1>
       
-      Crear venta
+      Crear solicitud
     
     </h1>
 
@@ -28,7 +28,7 @@ if($_SESSION["perfil"] == "Especial"){
       
       <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Crear venta</li>
+      <li class="active">Crear solicitud</li>
     
     </ol>
 
@@ -160,9 +160,6 @@ if($_SESSION["perfil"] == "Especial"){
                 ======================================--> 
 
                 <div class="form-group row nuevoProducto">
-
-                
-
                 </div>
 
                 <input type="hidden" id="listaProductos" name="listaProductos">
@@ -245,7 +242,7 @@ if($_SESSION["perfil"] == "Especial"){
                 ENTRADA MÉTODO DE PAGO
                 ======================================-->
 
-                <div class="form-group row">
+                <!--<div class="form-group row">
                   
                   <div class="col-xs-6" style="padding-right:0px">
                     
@@ -266,7 +263,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                   <input type="hidden" id="listaMetodoPago" name="listaMetodoPago">
 
-                </div>
+                </div>-->
 
                 <br>
       
@@ -311,7 +308,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                  <tr>
                   <th style="width: 10px">#</th>
-                  <th>Imagen</th>
+                   <!--<th>Imagen</th>-->
                   <th>Código</th>
                   <th>Descripcion</th>
                   <th>Stock</th>
@@ -408,6 +405,20 @@ MODAL AGREGAR CLIENTE
               </div>
 
             </div>
+            
+            <!-- ENTRADA PARA LA ÁREA -->
+            
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-building"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaArea" placeholder="Ingresar área" required>
+
+              </div>
+
+            </div>
 
             <!-- ENTRADA PARA EL TELÉFONO -->
             
@@ -417,7 +428,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(99999)'" data-mask required>
 
               </div>
 
@@ -436,18 +447,6 @@ MODAL AGREGAR CLIENTE
               </div>
 
             </div>
-
-             <!-- ENTRADA PARA LA FECHA DE NACIMIENTO -->
-            
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-calendar"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevaFechaNacimiento" placeholder="Ingresar fecha nacimiento" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask required>
-
-              </div>
 
             </div>
   

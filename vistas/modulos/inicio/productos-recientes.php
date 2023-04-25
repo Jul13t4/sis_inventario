@@ -42,13 +42,7 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
     for($i = 0; $i < 10; $i++){
 
       echo '<li class="item">
-
-        <div class="product-img">
-
-          <img src="'.$productos[$i]["imagen"].'" alt="Product Image">
-
-        </div>
-
+        
         <div class="product-info">
 
           <a href="" class="product-title">
@@ -62,6 +56,13 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
        </div>
 
       </li>';
+
+      /* ---------------- dentro del echo ---------------
+      /*<div class="product-img">
+
+      <img src="'.$productos[$i]["imagen"].'" alt="Product Image">
+
+      </div> */
 
     }
 

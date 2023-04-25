@@ -138,21 +138,20 @@ class ControladorProductos{
 
 				echo'<script>
 
-					swal({
-						  type: "error",
-						  title: "¡El producto no puede ir con los campos vacíos o llevar caracteres especiales!",
-						  showConfirmButton: true,
-						  confirmButtonText: "Cerrar"
-						  }).then(function(result){
-							if (result.value) {
-
-							window.location = "productos";
-
-							}
-						})
-
-			  	</script>';
+					</script>';
 			}
+
+			/*
+			swal({
+				type: "error",
+				title: "¡El producto no puede ir con los campos vacíos o llevar caracteres especiales!",
+				showConfirmButton: true,
+				confirmButtonText: "Cerrar"
+				}).then(function(result){
+					if (result.value) {
+						window.location = "productos";
+					}
+			})*/
 		}
 
 	/*=============================================
@@ -286,21 +285,20 @@ class ControladorProductos{
 
 				echo'<script>
 
-					swal({
-						  type: "error",
-						  title: "¡El producto no puede ir con los campos vacíos o llevar caracteres especiales!",
-						  showConfirmButton: true,
-						  confirmButtonText: "Cerrar"
-						  }).then(function(result){
-							if (result.value) {
-
-							window.location = "productos";
-
-							}
-						})
-
 			  	</script>';
 			}
+
+			/*
+			swal({
+			  type: "error",
+			  title: "¡El producto no puede ir con los campos vacíos o llevar caracteres especiales!",
+			  showConfirmButton: true,
+			  confirmButtonText: "Cerrar"
+			  }).then(function(result){
+				if (result.value) {
+					window.location = "productos";
+				}
+			})*/
 		}
 
 	
