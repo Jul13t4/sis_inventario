@@ -30,7 +30,7 @@ class ModeloClientes{
 		
 		}
 
-		$stmt->close();
+		$stmt->closeCursor();
 		$stmt = null;
 
 	}
@@ -61,8 +61,7 @@ class ModeloClientes{
 
 		}
 
-		$stmt -> close();
-
+		$stmt -> closeCursor();
 		$stmt = null;
 
 	}
@@ -84,7 +83,7 @@ class ModeloClientes{
 		$stmt->bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
 		
 
-		if($stmt->execute()){
+		if($stmt->execute($datos)){
 
 			return "ok";
 
@@ -94,7 +93,7 @@ class ModeloClientes{
 		
 		}
 
-		$stmt->close();
+		$stmt->closeCursor();
 		$stmt = null;
 
 	}
@@ -119,7 +118,7 @@ class ModeloClientes{
 
 		}
 
-		$stmt -> close();
+		$stmt -> closeCursor();
 
 		$stmt = null;
 
@@ -146,7 +145,7 @@ class ModeloClientes{
 
 		}
 
-		$stmt -> close();
+		$stmt -> closeCursor();
 
 		$stmt = null;
 

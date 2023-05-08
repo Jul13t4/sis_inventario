@@ -4,7 +4,7 @@
     
     <h1>
       
-      Crear venta
+      Crear solicitud
     
     </h1>
 
@@ -12,7 +12,7 @@
       
       <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Crear venta</li>
+      <li class="active">Crear solicitud</li>
     
     </ol>
 
@@ -412,7 +412,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(99999)'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar extensión" data-inputmask="'mask':'(99999)'" data-mask required>
 
               </div>
 

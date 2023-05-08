@@ -693,7 +693,7 @@ function listarMetodos(){
 }
 
 /*=============================================
-BOTON EDITAR VENTA
+BOTON EDITAR SOLICITAR
 =============================================*/
 $(".tablas").on("click", ".btnEditarVenta", function(){
 

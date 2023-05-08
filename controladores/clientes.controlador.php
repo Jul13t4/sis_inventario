@@ -13,6 +13,7 @@ class ControladorClientes{
 			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-]+[[:ascii:]]/', $_POST["nuevoCliente"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["nuevoDocumentoId"]) &&
 			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["nuevoEmail"]) && 
+			   preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-]+[[:ascii:]]/', $_POST["nuevaArea"]) &&  
 			   preg_match('/^[()\-0-9 ]+$/', $_POST["nuevoTelefono"]) && 
 			   preg_match('/^[#\.\-a-zA-Z0-9 ]+$/', $_POST["nuevaDireccion"])){
 
@@ -100,6 +101,7 @@ class ControladorClientes{
 			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-]+[[:ascii:]]/', $_POST["editarCliente"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["editarDocumentoId"]) &&
 			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["editarEmail"]) && 
+			   preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-]+[[:ascii:]]/', $_POST["editarArea"]) &&
 			   preg_match('/^[()\-0-9 ]+$/', $_POST["editarTelefono"]) && 
 			   preg_match('/^[#\.\-a-zA-Z0-9 ]+$/', $_POST["editarDireccion"])){
 			   

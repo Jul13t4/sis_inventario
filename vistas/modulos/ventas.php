@@ -29,7 +29,7 @@ if($xml){
     
     <h1>
       
-      Administrar ventas
+      Administrar solicitudes
     
     </h1>
 
@@ -37,7 +37,7 @@ if($xml){
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar ventas</li>
+      <li class="active">Administrar solicitudes</li>
     
     </ol>
 
@@ -53,7 +53,7 @@ if($xml){
 
           <button class="btn btn-primary">
             
-            Agregar venta
+            Agregar solicitud
 
           </button>
 
@@ -94,8 +94,9 @@ if($xml){
          <tr>
            
            <th style="width:10px">#</th>
-           <th>Código factura</th>
-           <th>Cliente</th>
+           <th>Número de solicitud</th>
+           <th>Solicitante</th>
+           <th>Área</th>
            <th>Vendedor</th>
            <!--<th>Forma de pago</th>-->
            <th>Neto</th>
@@ -135,19 +136,21 @@ if($xml){
 
                   $itemCliente = "id";
                   $valorCliente = $value["id_cliente"];
+                  $valorCliente1 = $value["area_cliente"];
 
-                  $respuestaCliente = ControladorClientes::ctrMostrarClientes($itemCliente, $valorCliente);
+                  $respuestaCliente = ControladorClientes::ctrMostrarClientes($itemCliente, $valorCliente, $valorCliente1);
 
                   echo '<td>'.$respuestaCliente["nombre"].'</td>';
+                  echo '<td>'.$respuestaCliente["area"].'</td>';
 
                   $itemUsuario = "id";
                   $valorUsuario = $value["id_vendedor"];
 
                   $respuestaUsuario = ControladorUsuarios::ctrMostrarUsuarios($itemUsuario, $valorUsuario);
 
-                  echo '<td>'.$respuestaUsuario["nombre"].'</td>
-
-                  <td>'.$value["metodo_pago"].'</td>
+                  echo 
+                  
+                  '<td>'.$respuestaUsuario["nombre"].'</td>               
 
                   <td>$ '.number_format($value["neto"],2).'</td>
 

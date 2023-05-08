@@ -65,7 +65,7 @@
 				<a href="clientes">
 
 					<i class="fa fa-users"></i>
-					<span>Clientes</span>
+					<span>Solicitantes</span>
 
 				</a>
 
@@ -81,7 +81,7 @@
 
 					<i class="fa fa-list-ul"></i>
 					
-					<span>Ventas</span>
+					<span>Solicitudes</span>
 					
 					<span class="pull-right-container">
 					
@@ -98,7 +98,7 @@
 						<a href="ventas">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Administrar ventas</span>
+							<span>Administrar solicitudes</span>
 
 						</a>
 
@@ -109,7 +109,7 @@
 						<a href="crear-venta">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Crear venta</span>
+							<span>Crear solicitud</span>
 
 						</a>
 
@@ -122,7 +122,7 @@
 						<a href="reportes">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Reporte de ventas</span>
+							<span>Reporte de Solicitudes</span>
 
 						</a>
 

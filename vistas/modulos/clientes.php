@@ -61,7 +61,7 @@ if($_SESSION["perfil"] == "Especial"){
            <th>Documento ID</th>
            <th>Email</th>
            <th>Área</th> 
-           <th>Teléfono</th>
+           <th>Extensión</th>
            <th>Dirección</th>
            <th>Total compras</th>
            <th>Última compra</th>
@@ -236,7 +236,7 @@ MODAL AGREGAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(99999)'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar extensión" data-inputmask="'mask':'(99999)'" data-mask required>
 
               </div>
 
@@ -369,7 +369,7 @@ MODAL EDITAR CLIENTE
               
                 <span class="input-group-addon"><i class="fa fa-university"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaArea" placeholder="Ingresar área" required>
+                <input type="text" class="form-control input-lg" name="editarArea" id="editarArea" required>
 
               </div>
 

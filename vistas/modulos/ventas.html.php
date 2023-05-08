@@ -4,7 +4,7 @@
     
     <h1>
       
-      Administrar ventas
+      Administrar solicitudes
     
     </h1>
 
@@ -12,7 +12,7 @@
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar ventas</li>
+      <li class="active">Administrar solicitudes</li>
     
     </ol>
 
@@ -46,7 +46,8 @@
            
            <th style="width:10px">#</th>
            <th>Código factura</th>
-           <th>Cliente</th>
+           <th>Solicitante</th>
+           <th>Área</th>
            <th>Vendedor</th>
            <!--<th>Forma de pago</th>-->
            <th>Neto</th>

@@ -54,6 +54,15 @@ class TablaProductosVentas{
 
   			}
 
+			/*=============================================
+ 	 		TRAEMOS LAS OBSERVACIONES
+  			=============================================*/ 
+
+			  $item = "id";
+		  	$valor = $productos[$i]["observaciones"];
+
+		  	$observaciones = ControladorProductos::ctrMostrarProductos ($item, $valor, $orden);
+
 		  	/*=============================================
  	 		TRAEMOS LAS ACCIONES
   			=============================================*/ 
@@ -65,6 +74,7 @@ class TablaProductosVentas{
 			      "'.$productos[$i]["codigo"].'",
 			      "'.$productos[$i]["descripcion"].'",
 			      "'.$stock.'",
+				  "'.$observaciones.'",
 			      "'.$botones.'"
 			    ],';
 				//"'.$imagen.'", Después del ID

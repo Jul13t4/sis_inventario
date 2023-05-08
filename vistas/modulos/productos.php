@@ -61,6 +61,7 @@ if($_SESSION["perfil"] == "Vendedor"){
            <th>Descripción</th>
            <th>Categoría</th>
            <th>Stock</th>
+           <th>Observaciones</th>
            <th>Precio de compra</th>
            <th>Precio de venta</th>
            <th>Agregado</th>
@@ -189,6 +190,20 @@ MODAL AGREGAR PRODUCTO
 
             </div>
 
+             <!-- ENTRADA PARA OBSERVACION -->
+              
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaObservacion" placeholder="Ingresar Observacion" required>
+
+              </div>
+
+            </div>   
+
              <!-- ENTRADA PARA PRECIO COMPRA -->
 
              <div class="form-group row">
@@ -225,11 +240,11 @@ MODAL AGREGAR PRODUCTO
                     
                     <div class="form-group">
                       
-                      <label>
+                      <!--<label>
                         
                         <input type="checkbox" class="minimal porcentaje" checked>
                         Utilizar procentaje
-                      </label>
+                      </label>-->
 
                     </div>
 
@@ -237,7 +252,7 @@ MODAL AGREGAR PRODUCTO
 
                   <!-- ENTRADA PARA PORCENTAJE -->
 
-                  <div class="col-xs-6" style="padding:0">
+                  <!--<div class="col-xs-6" style="padding:0">
                     
                     <div class="input-group">
                       
@@ -247,7 +262,7 @@ MODAL AGREGAR PRODUCTO
 
                     </div>
 
-                  </div>
+                  </div> -->
 
                 </div>
 
@@ -391,6 +406,20 @@ MODAL EDITAR PRODUCTO
 
             </div>
 
+             <!-- ENTRADA PARA OBSERVACION -->
+              
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaObservacion" placeholder="Ingresar Observacion" required>
+
+              </div>
+
+            </div>   
+
              <!-- ENTRADA PARA PRECIO COMPRA -->
 
              <div class="form-group row">
@@ -427,11 +456,11 @@ MODAL EDITAR PRODUCTO
                     
                     <div class="form-group">
                       
-                      <label>
+                      <!--<label>
                         
                         <input type="checkbox" class="minimal porcentaje" checked>
                         Utilizar procentaje
-                      </label>
+                      </label>-->
 
                     </div>
 
@@ -439,7 +468,7 @@ MODAL EDITAR PRODUCTO
 
                   <!-- ENTRADA PARA PORCENTAJE -->
 
-                  <div class="col-xs-6" style="padding:0">
+                  <!--<div class="col-xs-6" style="padding:0">
                     
                     <div class="input-group">
                       
@@ -449,7 +478,7 @@ MODAL EDITAR PRODUCTO
 
                     </div>
 
-                  </div>
+                  </div> -->
 
                 </div>
 
