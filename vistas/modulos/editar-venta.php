@@ -340,7 +340,6 @@
                    <!--<th>Imagen</th>-->
                   <th>Código</th>
                   <th>Descripcion</th>
-                  <th>Observaciones</th>
                   <th>Stock</th>
                   <th>Acciones</th>
                 </tr>

@@ -97,7 +97,9 @@ if($xml){
            <th>Número de solicitud</th>
            <th>Solicitante</th>
            <th>Área</th>
-           <th>Vendedor</th>
+           <th>Solicitante</th>
+           <th>V.B. Jefe de Área</th>
+           <th>V.B. DAF</th>
            <!--<th>Forma de pago</th>-->
            <th>Neto</th>
            <th>Total</th> 
@@ -151,6 +153,11 @@ if($xml){
                   echo 
                   
                   '<td>'.$respuestaUsuario["nombre"].'</td>               
+
+                 
+                  <td> <input type="checkbox" name="venta[]" value="'.$value["id"].'"> </td>
+                
+                  <td> <input type="checkbox" name="venta[]" value="'.$value["id"].'"> </td>
 
                   <td>$ '.number_format($value["neto"],2).'</td>
 

@@ -48,7 +48,9 @@
            <th>Código factura</th>
            <th>Solicitante</th>
            <th>Área</th>
-           <th>Vendedor</th>
+           <th>Solicitante</th>
+           <th>V.B. Jefe de Área</th>
+           <th>V.B. DAF</th>
            <!--<th>Forma de pago</th>-->
            <th>Neto</th>
            <th>Total</th> 

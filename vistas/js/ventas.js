@@ -75,7 +75,8 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 
       	    var descripcion = respuesta["descripcion"];
           	var stock = respuesta["stock"];
-          	var precio = respuesta["precio_venta"];
+          	var observacion = respuesta["observacion"];
+			var precio = respuesta["precio_venta"];
 
           	/*=============================================
           	EVITAR AGREGAR PRODUTO CUANDO EL STOCK ESTÁ EN CERO
@@ -118,6 +119,14 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 	          '<div class="col-xs-3">'+
 	            
 	             '<input type="number" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" value="1" stock="'+stock+'" nuevoStock="'+Number(stock-1)+'" required>'+
+
+	          '</div>' +
+
+			  '<!-- Observaciones del producto -->'+
+
+	          '<div class="col-xs-3">'+
+	            
+	             '<input type="text" class="form-control" id="observacionProducto" name="observacionProducto" observaciones="'+observacion+'" nuevaObservacion="'+observacion+'" required>'+
 
 	          '</div>' +
 
@@ -310,6 +319,14 @@ $(".btnAgregarProducto").click(function(){
 	          '<div class="col-xs-3 ingresoCantidad">'+
 	            
 	             '<input type="number" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" value="0" stock nuevoStock required>'+
+
+	          '</div>' +
+
+			  '<!-- Observaciones del producto -->'+
+
+	          '<div class="col-xs-3">'+
+	            
+	             '<input type="text" class="form-control" id="observacionProducto" name="observacionProducto" observaciones="'+observacion+'" nuevaObservacion="'+observacion+'" required>'+
 
 	          '</div>' +
 

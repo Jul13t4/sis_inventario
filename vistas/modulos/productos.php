@@ -126,7 +126,7 @@ MODAL AGREGAR PRODUCTO
 
                 <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
                   
-                  <option value="">Selecionar categoría</option>
+                  <option value="">Seleccionar categoría</option>
 
                   <?php
 
@@ -189,18 +189,6 @@ MODAL AGREGAR PRODUCTO
               </div>
 
             </div>
-
-             <!-- ENTRADA PARA OBSERVACION -->
-              
-             <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevaObservacion" placeholder="Ingresar Observacion" required>
-
-              </div>
 
             </div>   
 

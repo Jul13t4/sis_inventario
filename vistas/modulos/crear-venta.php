@@ -130,7 +130,7 @@ if($_SESSION["perfil"] == "Especial"){
                     
                     <select class="form-control" id="seleccionarCliente" name="seleccionarCliente" required>
 
-                    <option value="">Seleccionar cliente</option>
+                    <option value="">Seleccionar solicitante</option>
 
                     <?php
 
@@ -149,7 +149,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                     </select>
                     
-                    <span class="input-group-addon"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal">Agregar cliente</button></span>
+                    <span class="input-group-addon"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal">Agregar solicitante</button></span>
                   
                   </div>
                 
@@ -312,7 +312,6 @@ if($_SESSION["perfil"] == "Especial"){
                   <th>Código</th>
                   <th>Descripcion</th>
                   <th>Stock</th>
-                  <th>Observaciones</th>
                   <th>Acciones</th>
                 </tr>
 

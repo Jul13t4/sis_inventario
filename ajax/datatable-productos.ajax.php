@@ -66,15 +66,6 @@ class TablaProductos{
 
   			}
 
-			/*=============================================
- 	 		TRAEMOS LAS OBSERVACIONES
-  			=============================================*/ 
-
-			$item = "id";
-		  	$valor = $productos[$i]["observaciones"];
-
-		  	$observaciones = ControladorProductos::ctrMostrarProductos ($item, $valor, $orden);
-
 		  	/*=============================================
  	 		TRAEMOS LAS ACCIONES
   			=============================================*/ 
@@ -96,13 +87,14 @@ class TablaProductos{
 			      "'.$productos[$i]["descripcion"].'",
 			      "'.$categorias["categoria"].'",
 			      "'.$stock.'",
-				  "'.$observaciones.'",
+				  
 			      "'.$productos[$i]["precio_compra"].'",
 			      "'.$productos[$i]["precio_venta"].'",
 			      "'.$productos[$i]["fecha"].'",
 			      "'.$botones.'"
 			    ],';
 					//"'.$imagen.'" Después del ID
+					// "'.$observaciones.'",
 		  }
 
 		  $datosJson = substr($datosJson, 0, -1);

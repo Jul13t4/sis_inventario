@@ -4,167 +4,191 @@ require_once "conexion.php";
 
 class ModeloProductos{
 
-	/*=============================================
-	MOSTRAR PRODUCTOS
-	=============================================*/
+    /*=============================================
+    MOSTRAR PRODUCTOS
+    =============================================*/
 
-	static public function mdlMostrarProductos($tabla, $item, $valor, $orden){
+    static public function mdlMostrarProductos($tabla, $item, $valor, $orden){
 
-		if($item != null){
+        if($item != null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item ORDER BY id DESC");
+            $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item ORDER BY id DESC");
 
-			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+            $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 
-			$stmt -> execute();
+            $stmt->execute();
 
-			return $stmt -> fetch();
+            return $stmt->fetch();
 
-		}else{
+        }else{
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ORDER BY $orden DESC");
+            $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ORDER BY $orden DESC");
 
-			$stmt -> execute();
+            $stmt->execute();
 
-			return $stmt -> fetchAll();
+            return $stmt->fetchAll();
 
-			$stmt -> closeCursor();
+            $stmt->closeCursor();
 
-			$stmt = null;
-		}
-	}
+            $stmt = null;
+        }
+    }
 
-	/*=============================================
-	REGISTRO DE PRODUCTO
-	=============================================*/
-	static public function mdlIngresarProducto($tabla, $datos){
+    /*=============================================
+    REGISTRO DE PRODUCTO
+    =============================================*/
+    static public function mdlIngresarProducto($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_categoria, codigo, descripcion, imagen, stock, observaciones, precio_compra, precio_venta) VALUES (:id_categoria, :codigo, :descripcion, :imagen, :stock, :observaciones, :precio_compra, :precio_venta)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_categoria, codigo, descripcion, imagen, stock, precio_compra, precio_venta) VALUES (:id_categoria, :codigo, :descripcion, :imagen, :stock, :precio_compra, :precio_venta)");
 
-		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
-		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
-		$stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
-		$stmt->bindParam(":imagen", $datos["imagen"], PDO::PARAM_STR);
-		$stmt->bindParam(":stock", $datos["stock"], PDO::PARAM_STR);
-		$stmt->bindParam(":observaciones", $datos["observaciones"], PDO::PARAM_STR);
-		$stmt->bindParam(":precio_compra", $datos["precio_compra"], PDO::PARAM_STR);
-		$stmt->bindParam(":precio_venta", $datos["precio_venta"], PDO::PARAM_STR);
+        $stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
+        $stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
+        $stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
+        $stmt->bindParam(":imagen", $datos["imagen"], PDO::PARAM_STR);
+        $stmt->bindParam(":stock", $datos["stock"], PDO::PARAM_STR);
+        $stmt->bindParam(":precio_compra", $datos["precio_compra"], PDO::PARAM_STR);
+        $stmt->bindParam(":precio_venta", $datos["precio_venta"], PDO::PARAM_STR);
 
-		if($stmt->execute()){
+        if($stmt->execute()){
 
-			return "ok";
+            $id_producto = Conexion::conectar()->lastInsertId();
 
-		}else{
+            $datosObservaciones = array(
+                "id_venta" => $id_producto,
+                "observaciones" => $datos["observaciones"]
+            );
 
-			return "error";
-		
-		}
+            if (self::mdlIngresarObservaciones("ventas", $datosObservaciones)) {
+                return "ok";
+            } else {
+                return "error";
+            }
+        }else{
 
-		$stmt->closeCursor();
-		$stmt = null;
+            return "error";
 
-	}
+        }
 
-	/*=============================================
-	EDITAR PRODUCTO
-	=============================================*/
-	static public function mdlEditarProducto($tabla, $datos){
+        $stmt->closeCursor();
+        $stmt = null;
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, descripcion = :descripcion, imagen = :imagen, stock = :stock, observaciones = :observaciones, precio_compra = :precio_compra, precio_venta = :precio_venta WHERE codigo = :codigo");
+    }
 
-		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
-		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
-		$stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
-		$stmt->bindParam(":imagen", $datos["imagen"], PDO::PARAM_STR);
-		$stmt->bindParam(":stock", $datos["stock"], PDO::PARAM_STR);
-		$stmt->bindParam(":observaciones", $datos["observaciones"], PDO::PARAM_STR);
-		$stmt->bindParam(":precio_compra", $datos["precio_compra"], PDO::PARAM_STR);
-		$stmt->bindParam(":precio_venta", $datos["precio_venta"], PDO::PARAM_STR);
+    /*=============================================
+    EDITAR PRODUCTO
+    =============================================*/
+    static public function mdlEditarProducto($tabla, $datos){
 
-		if($stmt->execute()){
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, descripcion = :descripcion, imagen = :imagen, stock = :stock, precio_compra = :precio_compra, precio_venta = :precio_venta WHERE codigo = :codigo");
 
-			return "ok";
+        $stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
+        $stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
+        $stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
+        $stmt->bindParam(":imagen", $datos["imagen"], PDO::PARAM_STR);
+        $stmt->bindParam(":stock", $datos["stock"], PDO::PARAM_STR);
+        $stmt->bindParam(":precio_compra", $datos["precio_compra"], PDO::PARAM_STR);
+        $stmt->bindParam(":precio_venta", $datos["precio_venta"], PDO::PARAM_STR);
 
-		}else{
+        if($stmt->execute()){
 
-			return "error";
-		
-		}
+            return "ok";
 
-		$stmt->closeCursor();
-		$stmt = null;
+        }else{
 
-	}
+            return "error";
 
-	/*=============================================
-	BORRAR PRODUCTO
-	=============================================*/
+        }
 
-	static public function mdlEliminarProducto($tabla, $datos){
+        $stmt->closeCursor();
+        $stmt = null;
 
-		$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
+    }
 
-		$stmt -> bindParam(":id", $datos, PDO::PARAM_INT);
+    /*=============================================
+    BORRAR PRODUCTO
+    =============================================*/
 
-		if($stmt -> execute()){
+    static public function mdlEliminarProducto($tabla, $datos){
 
-			return "ok";
-		
-		}else{
+        $stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
 
-			return "error";	
+        $stmt->bindParam(":id", $datos, PDO::PARAM_INT);
 
-		}
+        if($stmt->execute()){
 
-		$stmt -> closeCursor();
+            return "ok";
 
-		$stmt = null;
+        }else{
 
-	}
+            return "error";
 
-	/*=============================================
-	ACTUALIZAR PRODUCTO
-	=============================================*/
+        }
 
-	static public function mdlActualizarProducto($tabla, $item1, $valor1, $valor){
+        $stmt->closeCursor();
+        $stmt = null;
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET $item1 = :$item1 WHERE id = :id");
+    }
 
-		$stmt -> bindParam(":".$item1, $valor1, PDO::PARAM_STR);
-		$stmt -> bindParam(":id", $valor, PDO::PARAM_STR);
+    /*=============================================
+    ACTUALIZAR PRODUCTO
+    =============================================*/
 
-		if($stmt -> execute()){
+    static public function mdlActualizarProducto($tabla, $item1, $valor1, $valor){
 
-			return "ok";
-		
-		}else{
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET $item1 = :$item1 WHERE id = :id");
 
-			return "error";	
+        $stmt->bindParam(":".$item1, $valor1, PDO::PARAM_STR);
+        $stmt->bindParam(":id", $valor, PDO::PARAM_STR);
 
-		}
+        if($stmt->execute()){
 
-		$stmt -> closeCursor();
+            return "ok";
 
-		$stmt = null;
+        }else{
 
-	}
+            return "error";
 
-	/*=============================================
-	MOSTRAR SUMA VENTAS
-	=============================================*/	
+        }
 
-	static public function mdlMostrarSumaVentas($tabla){
+        $stmt->closeCursor();
+        $stmt = null;
 
-		$stmt = Conexion::conectar()->prepare("SELECT SUM(ventas) as total FROM $tabla");
+    }
 
-		$stmt -> execute();
+    /*=============================================
+    MOSTRAR SUMA VENTAS
+    =============================================*/   
 
-		return $stmt -> fetch();
+    static public function mdlMostrarSumaVentas($tabla){
 
-		$stmt -> closeCursor();
+        $stmt = Conexion::conectar()->prepare("SELECT SUM(ventas) as total FROM $tabla");
 
-		$stmt = null;
-	}
+        $stmt->execute();
 
+        return $stmt->fetch();
 
+        $stmt->closeCursor();
+
+        $stmt = null;
+    }
+
+    /*=============================================
+    INGRESAR OBSERVACIONES
+    =============================================*/
+    static public function mdlIngresarObservaciones($tabla, $datos){
+
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_venta, observaciones) VALUES (:id_venta, :observaciones)");
+
+        $stmt->bindParam(":id_venta", $datos["id_venta"], PDO::PARAM_INT);
+        $stmt->bindParam(":observaciones", $datos["observaciones"], PDO::PARAM_STR);
+
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+
+        $stmt->closeCursor();
+        $stmt = null;
+    }
 }

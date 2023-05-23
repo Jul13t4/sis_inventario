@@ -124,7 +124,10 @@ class ControladorVentas{
 						   "total"=>$_POST["totalVenta"]);
 						   //"metodo_pago"=>$_POST["listaMetodoPago"]);
 
-			$respuesta = ModeloVentas::mdlIngresarVenta($tabla, $datos);
+			$observacion = ""; // Asigna un valor por defecto o inicializa con null según tus necesidades
+			$respuesta = ModeloVentas::mdlIngresarVenta($tabla, $datos, $observacion);
+			
+			//$respuesta = ModeloVentas::mdlIngresarVenta($tabla, $datos, $observaciones);
 
 			if($respuesta == "ok"){
 
@@ -297,6 +300,7 @@ class ControladorVentas{
 					$valor1b = $value["cantidad"] + $traerProducto["stock"];
 
 					$nuevoStock = ModeloProductos::mdlActualizarProducto($tablaProductos, $item1b, $valor1b, $valor);
+
 
 				}
 
@@ -511,6 +515,11 @@ class ControladorVentas{
 				$valor1b = $value["cantidad"] + $traerProducto["stock"];
 
 				$nuevoStock = ModeloProductos::mdlActualizarProducto($tablaProductos, $item1b, $valor1b, $valor);
+
+				$item1c = "observaciones";
+				$valor1c = $value["observaciones"];
+
+				$nuevoStock = ModeloProductos::mdlActualizarProducto($tablaProductos, $item1c, $valor1c, $valor);
 
 			}
 

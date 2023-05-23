@@ -306,8 +306,8 @@ class TCPDF_IMAGES {
 				} else { // Indexed
 					if ($n > 0) {
 						$trns = array();
-						for ($i = 0; $i < $n; ++ $i) {
-							$trns[] = ord($t{$i});
+						for ($i = 0; $i < $n; ++$i) {
+							$trns[] = ord($t[$i]);
 						}
 					}
 				}

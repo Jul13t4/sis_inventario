@@ -82,11 +82,11 @@
                     
                     <select class="form-control" id="seleccionarCliente" name="seleccionarCliente" required>
 
-                    <option value="">Seleccionar cliente</option>
+                    <option value="">Seleccionar solicitante</option>
 
                     </select>
                     
-                    <span class="input-group-addon"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal">Agregar cliente</button></span>
+                    <span class="input-group-addon"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal">Agregar solicitante</button></span>
                   
                   </div>
                 
@@ -117,6 +117,14 @@
                   <div class="col-xs-3">
                     
                      <input type="number" class="form-control" id="nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" placeholder="0" required>
+
+                  </div> 
+
+                  <!-- Observaciones del producto -->
+                  
+                  <div class="col-xs-3">
+                      
+                      <input type="text" class="form-control" id="observacionProducto" name="observacionProducto" placeholder="Observacion del producto" required>
 
                   </div> 
 
@@ -278,7 +286,7 @@
                   <th>Código</th>
                   <th>Descripcion</th>
                   <th>Stock</th>
-                  <th>Acciones</th>
+                  <th>Acciónes</th>
                 </tr>
 
               </thead>

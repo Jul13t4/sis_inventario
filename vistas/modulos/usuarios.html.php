@@ -217,7 +217,7 @@ MODAL AGREGAR USUARIO
 
                 <select class="form-control input-lg" name="nuevoPerfil">
                   
-                  <option value="">Selecionar perfil</option>
+                  <option value="">Seleccionar perfil</option>
 
                   <option value="Administrador">Administrador</option>
 
