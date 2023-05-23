@@ -386,8 +386,8 @@ class ControladorVentas{
 						   "total"=>$_POST["totalVenta"]);
 						   //"metodo_pago"=>$_POST["listaMetodoPago"]);
 
-
-			$respuesta = ModeloVentas::mdlEditarVenta($tabla, $datos);
+			$observacion = ""; // Asigna un valor por defecto o inicializa con null según tus necesidades
+			$respuesta = ModeloVentas::mdlEditarVenta($tabla, $datos, $observacion);
 
 			if($respuesta == "ok"){
 
